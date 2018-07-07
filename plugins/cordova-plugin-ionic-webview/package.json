@@ -1,0 +1,86 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-ionic-webview@1.1.11",
+        "scope": null,
+        "escapedName": "cordova-plugin-ionic-webview",
+        "name": "cordova-plugin-ionic-webview",
+        "rawSpec": "1.1.11",
+        "spec": "1.1.11",
+        "type": "version"
+      },
+      "C:\\ionic\\jdshop_demo\\node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-ionic-webview@1.1.11",
+  "_id": "cordova-plugin-ionic-webview@1.1.11",
+  "_inCache": true,
+  "_location": "/cordova-plugin-ionic-webview",
+  "_nodeVersion": "8.5.0",
+  "_npmOperationalInternal": {
+    "host": "s3://npm-registry-packages",
+    "tmp": "tmp/cordova-plugin-ionic-webview-1.1.11.tgz_1507126683090_0.16735983942635357"
+  },
+  "_npmUser": {
+    "name": "manucorporat",
+    "email": "manu.mtza@gmail.com"
+  },
+  "_npmVersion": "5.4.2",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-ionic-webview@1.1.11",
+    "scope": null,
+    "escapedName": "cordova-plugin-ionic-webview",
+    "name": "cordova-plugin-ionic-webview",
+    "rawSpec": "1.1.11",
+    "spec": "1.1.11",
+    "type": "version"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-1.1.11.tgz",
+  "_shasum": "6510b6f6edcd0bbcdd05db6a8fabdc096a466f9c",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-ionic-webview@1.1.11",
+  "_where": "C:\\ionic\\jdshop_demo\\node_modules",
+  "author": {
+    "name": "Apache Cordova"
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-team/cordova-plugin-ionic-webview/issues"
+  },
+  "dependencies": {},
+  "description": "The official Ionic's WKWebView Engine Plugin",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "integrity": "sha512-YozlMJkeQOYQEPn46C+DFr/izl5zQQQK1RSAyv9n673l228kI75st7fPUk9OepkwKvc6kdFlMZA1KESX6Dh+3g==",
+    "shasum": "6510b6f6edcd0bbcdd05db6a8fabdc096a466f9c",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-ionic-webview/-/cordova-plugin-ionic-webview-1.1.11.tgz"
+  },
+  "gitHead": "427497aef22e74fabf4fcf062204aa88a879b502",
+  "homepage": "https://github.com/ionic-team/cordova-plugin-ionic-webview#readme",
+  "keywords": [
+    "cordova",
+    "wkwebview"
+  ],
+  "license": "Apache-2.0",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "manucorporat",
+      "email": "manu.mtza@gmail.com"
+    }
+  ],
+  "name": "cordova-plugin-ionic-webview",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ionic-team/cordova-plugin-ionic-webview.git"
+  },
+  "version": "1.1.11"
+}
