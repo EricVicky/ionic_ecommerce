@@ -1,0 +1,27 @@
+.personal{
+
+    .item-note{
+        font-size: 1.4rem;
+        color: #666;
+        float: right;
+
+        img{
+
+            width: 4rem;
+            height: 4rem;
+            border-radius: 4rem;
+        }
+
+
+    }
+}
+
+/*箭头*/
+.item-ios ion-icon[item-left], .item-ios ion-icon[item-right], .item-ios ion-icon[item-start], .item-ios ion-icon[item-end]{
+
+    color: #666;
+
+    font-size:2.4rem;
+
+
+}

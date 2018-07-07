@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-navbar>
+    <ion-searchbar (tap)="goSearch()"></ion-searchbar>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+   <ion-slides *ngIf="focusList.length>0" class="focus" pager  loop="true" autoplay="3000">    
+      <ion-slide *ngFor="let item of focusList">
+          <img [src]="config.apiUrl+item.pic" />
+      </ion-slide>         
+   </ion-slides>
+
+   <div class="home_nav">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-2.4><ion-icon name="ios-construct"></ion-icon><div><font size=2>大项招标</font></div></ion-col>
+        <ion-col col-2.4><ion-icon name="ios-create"></ion-icon><div><font size=2>审　批</font></div></ion-col>
+        <ion-col col-2.4><ion-icon name="ios-archive"></ion-icon><div><font size=2>大项采购</font></div></ion-col>
+        <ion-col col-2.4><ion-icon name="ios-camera"></ion-icon><div><font size=2>源头监督</font></div></ion-col>
+        <ion-col col-2.4><ion-icon name="ios-bicycle"></ion-icon><div><font size=2>物流监督</font></div></ion-col>
+      </ion-row>
+    </ion-grid>
+   </div>
+
+   <div class="home_brand">
+    品牌街
+   </div>
+
+   <div class="hot_shop clearfix">   
+      <ion-grid>   
+        <ion-row>
+          <ion-col col-3 *ngFor="let item of hotList" [navPush]="PcontentPage" [navParams]="{'id':item['_id']}">                                   
+            <img class="brand" [src]="config.apiUrl+item.s_pic" />
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+   </div>
+
+    <div class="home_title">
+      
+      每日特辑
+    </div>
+    <div class="testimg">
+      <img src="../../assets/imgs/test.png" />
+    </div>
+
+    <div class="hot_shop clearfix">      
+      <ion-row>
+         <ion-col col-4 *ngFor="let item of hotList" [navPush]="PcontentPage" [navParams]="{'id':item['_id']}">                                   
+
+                 <img class="special" [src]="config.apiUrl+item.s_pic" />
+                 <div class="hot_shop_detail">{{item.title}}</div>
+                 <p><span class="price">¥{{item.price}}</span> <span class="old_price">¥{{item.old_price}}</span></p>
+         </ion-col>
+      </ion-row>
+
+
+    </div>
+
+    <div class="home_title">
+      精品推荐
+    </div>
+    <div class="rec_shop">
+
+
+      <!--外层的ion-scroll 100%   里面元素的宽度要大于100%-->
+        <ion-scroll scrollX="true">  
+
+            <ul class="plist clearfix" [ngStyle]="{'width':bestListWidth}">
+                <li *ngFor="let item of bestList" [navPush]="PcontentPage" [navParams]="{'id':item['_id']}">     
+               
+                  <img [src]="config.apiUrl+item.s_pic" />
+                  <div class="rec_shop_detial">{{item.title}}</div>
+                  <p><span class="price">¥{{item.price}}</span><p>
+
+                </li>
+              </ul>
+        </ion-scroll>
+
+       
+
+      
+    </div>
+
+    <div class="home_title">
+      
+           猜你喜欢
+    </div>
+
+    <div class="hot_shop clearfix">      
+          <ion-row>
+              <ion-col col-6 *ngFor="let item of hotList" [navPush]="PcontentPage" [navParams]="{'id':item['_id']}">                                   
+
+                      <img [src]="config.apiUrl+item.s_pic" />
+                      <div class="hot_shop_detail">{{item.title}}</div>
+                      <p><span class="price">¥{{item.price}}</span> <span class="old_price">¥{{item.old_price}}</span></p>
+              </ion-col>
+          </ion-row>
+
+
+    </div>
+
+
+
+</ion-content>

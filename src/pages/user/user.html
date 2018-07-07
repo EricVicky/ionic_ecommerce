@@ -1,0 +1,76 @@
+<!--
+  Generated template for the UserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>用户中心</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <div class="login" *ngIf="!userinfo">
+    <div class="userimg">
+      <img src="assets/imgs/user.png"  />
+    </div>
+
+    <div class="login_reg">
+        <button ion-button [navPush]='LoginPage'>登录</button>
+        <button ion-button [navPush]='RegisterPage'>注册</button>
+    </div>
+
+  </div>
+
+
+  <ion-list inset  *ngIf="userinfo">
+    <ion-item [navPush]="PersonalPage">
+            <ion-avatar item-left>
+                  <img src="xxx.png" onerror="this.src='assets/imgs/user.png'" class="avatar">
+            </ion-avatar>                  
+            <h2>用户名:{{userinfo.username}}</h2>
+            <p>普通会员</p>
+            <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+      </ion-item>
+  </ion-list>
+
+
+
+  <ion-list inset class="user_list">
+
+        <ion-item-divider >
+        </ion-item-divider>
+        <ion-item>
+            <ion-icon name="ios-paper-outline" item-start></ion-icon>
+            <span>全部订单</span>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="ios-card-outline" item-start></ion-icon>
+            <span> 待付款</span>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="ios-subway-outline" item-start></ion-icon>
+            <span>待收货</span>
+        </ion-item>
+
+        <ion-item-divider >
+        </ion-item-divider>
+        
+        <ion-item>
+            <ion-icon name="ios-star-outline" item-start></ion-icon>
+            <span>我的收藏</span>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="ios-people-outline" item-start></ion-icon>
+            <span>在线客服</span>
+        </ion-item>
+
+
+  </ion-list>
+
+</ion-content>

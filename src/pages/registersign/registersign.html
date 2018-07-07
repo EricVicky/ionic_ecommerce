@@ -1,0 +1,38 @@
+<!--
+  Generated template for the RegistersignPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>输入验证码</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+    <div class="code_info">
+        <h4 class="positive">马上验证手机，激活你的账户</h4>
+        <p class="code_sign_p">验证码已通过短信方式发送至{{tel}}，请输入验证码完成验证，手机绑定是为了验证用户的真实性和账号安全</p>
+    </div>
+
+    <div class="sign_page">
+
+        <input type="text" [(ngModel)]='code' placeholder="验证码" />
+
+        <div class="timer" *ngIf="!isShowSend"> 
+               倒计时({{num}})
+        </div>
+        <div class="timer" *ngIf="isShowSend" (tap)="sendCode()"> 
+               重新发送
+         </div>
+
+    </div>
+
+    <button class="reg_btn" ion-button block color="danger" (click)="goRegisterpasswordPage()">下一步</button>
+    
+</ion-content>

@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      购物车
+    </ion-title>
+
+  <ion-buttons end>
+    <button ion-button (tap)="isEdit=!isEdit">
+      <span *ngIf="!isEdit">编辑</span>
+      <span *ngIf="isEdit">完成</span>
+    </button>
+  </ion-buttons>
+
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+ 
+    <div class="cart_spinner" *ngIf="list.length==0 && hasData">
+      <ion-spinner></ion-spinner>
+    </div>  
+    
+    <p style="text-align:center; padding-top:80px;" *ngIf="!hasData">您购入车没有数据!</p>
+    
+
+    <dl class="cart_list" *ngFor="let item of list;">
+      
+            <dt>
+              <ion-checkbox color="danger" [(ngModel)]="item.checked" (ionChange)="changeCarts()"></ion-checkbox>
+             
+              <img [src]="config.apiUrl+item.product_pic" />
+      
+            </dt>      
+            <dd>
+                <h2 class="cart_title">{{item.product_title}}</h2>
+                <div class="cart_info">
+                    <div class="cart_price">
+                        ¥{{item.product_price}}元
+                    </div>      
+                    <div class="cart_num">
+                      <div class="input_left" (tap)="decCount(item)">-</div>
+                      <div class="input_center">
+                          <input type="text"  readonly="readonly" [(ngModel)]="item.product_count" name="num" id="num" />
+                      </div>
+                      <div class="input_right" (tap)="incCount(item)">+</div>
+      
+                    </div>
+      
+                </div>
+            </dd>
+          </dl>
+</ion-content>
+
+
+<ion-footer *ngIf="hasData">
+  <ion-toolbar *ngIf="!isEdit">
+    <div class="all_price"  (tap)="checkAll()">
+      
+      <ion-checkbox disabled="true" color="danger" [(ngModel)]='isChencked'></ion-checkbox>
+      全选  　<strong>合计:¥{{allPrice}}元</strong>
+    </div>
+    <ion-buttons end>
+      <div color="danger" (tap)="doPay()" class="dopay">
+        去结算
+      </div>
+
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar *ngIf="isEdit">
+    <div class="all_price"  (tap)="checkAll()">
+      
+      <ion-checkbox disabled="true" color="danger" [(ngModel)]='isChencked'></ion-checkbox>
+      全选  　
+    </div>
+    <ion-buttons end>
+      <div color="danger" (tap)="doDelete()" class="dodelete">
+        删除
+      </div>
+
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

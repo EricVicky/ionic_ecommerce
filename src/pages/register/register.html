@@ -1,0 +1,27 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>输入手机号</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+                   
+     <div class="register_page">
+
+      <!-- MVVM -->
+
+            <input type="text" [(ngModel)]='tel' placeholder="请输入手机号" />
+      </div>
+      
+    <button class="reg_btn" ion-button block color="danger" (click)="goRegistersignPage()">下一步</button>
+
+</ion-content>

@@ -1,0 +1,31 @@
+<!--
+  Generated template for the AddaddressPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>增加地址</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <ion-list class="login_list">        
+    <ion-item>
+      <ion-label fixed>姓名:</ion-label>
+      <ion-input type="text" placeholder="姓名" [(ngModel)]='addressList.name'></ion-input>
+    </ion-item>        
+    <ion-item>
+        <ion-label fixed>电话号码:</ion-label>
+        <ion-input type="text" placeholder="电话号码"  [(ngModel)]='addressList.phone'></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label fixed>收货地址:</ion-label>
+        <ion-input type="text" placeholder="收货地址"  [(ngModel)]='addressList.address'></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+    <button ion-button block color="danger" (click)="addAddress()">+增加</button>
+  </ion-content>
+  

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-searchbar></ion-searchbar>
+    
+       
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="cate_content">
+      <div class="cate_left">
+          <ion-list>
+            <ion-item *ngFor="let item of leftCate" (tap)="getRightCateData(item['_id'])">
+              {{item.title}}
+            </ion-item>
+          </ion-list>
+      </div>
+
+      <div class="cate_right">
+          <ion-row>
+              <ion-col col-4 *ngFor="let item of rightCate" [navPush]='ProductlistPage' [navParams]="{'cid':item['_id']}">              
+                
+                    <img [src]="config.apiUrl+item.pic" />
+                    <p>{{item.title}}</p>                           
+              </ion-col>
+          </ion-row>
+
+      </div>
+
+
+  </div>
+</ion-content>
